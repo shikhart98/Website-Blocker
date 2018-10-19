@@ -1,7 +1,7 @@
 # Website-Blocker
-Python script that 🚫 blocks 🚫 websites.
+Python software(Script + GUI) that 🚫 blocks 🚫 websites.
 
-#Features 
+# Features 
 > Proper GUI to add websites which you want to block
 ![ee](https://user-images.githubusercontent.com/29306481/47238275-51f60900-d3ff-11e8-9d1c-81ff1928bc12.png)
 > Change the timing for blocking websites from Website_Blocker.py file
