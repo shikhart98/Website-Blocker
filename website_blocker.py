@@ -1,14 +1,28 @@
 import time
 from datetime import datetime as dt
+import sqlite3
+
+def getWebsites():
+	conn = sqlite3.connect("WebDB01.db")
+	cur = conn.cursor()
+	cur.execute("SELECT url FROM db")
+	rows = cur.fetchall()
+	conn.close()
+	return rows
+
 #hosts file path [this is for windows]
 hosts_temp = "hosts"
 hosts_path = r"C:\Windows\System32\drivers\etc\hosts"
 #ip address
 redirect = "127.0.0.1"
+
 #list of websites you want to block
-websites = ["www.facebook.com","facebook.com"]
+websites = []
+for web in getWebsites():
+	websites.append(web[0])
+
 while True :
-	if dt(dt.now().year,dt.now().month,dt.now().day,8) < dt.now() <  dt(dt.now().year,dt.now().month,dt.now().day,16) :
+	if dt(dt.now().year,dt.now().month,dt.now().day,9) < dt.now() <  dt(dt.now().year,dt.now().month,dt.now().day,12) :
 		print("Working hours!")
 		with open(hosts_path,'r+') as file:
 			content = file.read()
