@@ -22,7 +22,7 @@ for web in getWebsites():
 	websites.append(web[0])
 
 while True :
-	if dt(dt.now().year,dt.now().month,dt.now().day,9) < dt.now() <  dt(dt.now().year,dt.now().month,dt.now().day,12) :
+	if dt(dt.now().year,dt.now().month,dt.now().day,8) < dt.now() <  dt(dt.now().year,dt.now().month,dt.now().day,10) :
 		print("Working hours!")
 		with open(hosts_path,'r+') as file:
 			content = file.read()
