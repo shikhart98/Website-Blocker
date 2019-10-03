@@ -22,7 +22,7 @@ for web in getWebsites():
 	websites.append(web[0])
 
 while True :
-	if dt(dt.now().year,dt.now().month,dt.now().day,9) < dt.now() <  dt(dt.now().year,dt.now().month,dt.now().day,12) :
+	if dt(dt.now().year,dt.now().month,dt.now().day,8) < dt.now() <  dt(dt.now().year,dt.now().month,dt.now().day,10) :
 		print("Working hours!")
 		with open(hosts_path,'r+') as file:
 			content = file.read()
@@ -40,6 +40,6 @@ while True :
 				if not any(website in line for website in websites):
 					file.write(line)
 			file.truncate() # deletes everything below where the file pointer is.
-	time.sleep(5) #sleeps for 5 seconds and run the while loop after every 5 seconds.
+	time.sleep(10) #sleeps for 5 seconds and run the while loop after every 5 seconds.
 
 
