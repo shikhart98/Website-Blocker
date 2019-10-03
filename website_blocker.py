@@ -5,7 +5,7 @@ import sqlite3
 def getWebsites():
 	conn = sqlite3.connect("WebDB01.db")
 	cur = conn.cursor()
-	cur.execute("SELECT url FROM db")
+	cur.execute("SELECT websites FROM db")
 	rows = cur.fetchall()
 	conn.close()
 	return rows
