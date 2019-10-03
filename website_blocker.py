@@ -40,6 +40,6 @@ while True :
 				if not any(website in line for website in websites):
 					file.write(line)
 			file.truncate() # deletes everything below where the file pointer is.
-	time.sleep(5) #sleeps for 5 seconds and run the while loop after every 5 seconds.
+	time.sleep(10) #sleeps for 5 seconds and run the while loop after every 5 seconds.
 
 
