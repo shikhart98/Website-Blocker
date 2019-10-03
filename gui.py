@@ -39,14 +39,14 @@ createTable()
 showWebsites()
 
 siteName = StringVar()
-e1 = Entry(window,textvariable = siteName)
-e1.grid(row = 0, column = 0,padx = 5, pady=5)
+e1 = Entry(window,text = "Name",textvariable = siteName)
+e1.grid(row = 0, column = 0,padx = 10, pady=10)
 
 siteUrl = StringVar()
-e2 = Entry(window,textvariable = siteUrl)
-e2.grid(row = 0, column = 1,padx = 5, pady=5)
+e2 = Entry(window,text = "Url",textvariable = siteUrl)
+e2.grid(row = 0, column = 1,padx = 10, pady=10)
 
-b1 = Button(window,text = "ADD",command = insertWebsite)
-b1.grid(row = 1,column=1,padx = 5,pady=5)
+b1 = Button(window,text = "Add",command = insertWebsite)
+b1.grid(row = 1,column=1,padx = 10,pady=10)
 
 window.mainloop()
